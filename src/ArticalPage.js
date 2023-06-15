@@ -62,7 +62,7 @@ function ArticalPage() {
           </button>
         </div>
         <div>
-          < TopPost />
+        <TopPost/>
         </div>
       </div>
     );

@@ -14,12 +14,7 @@ function TopPost() {
   const date = new Date();
   const dateString = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
   console.log(dateString);
-  // const data =
-  // const indexs = [99, 45, 66, 31];
   useEffect(() => {
-
-    // var url = "https://newsapi.org/v2/everything?q=" + params.category + "&from=" + dateString + "&sortBy=publishedAt&apiKey=6b7565cd97ef4ee8b3e5750e6ac65071";
-
 
     var url = "https://blog-project-by-amina.onrender.com/" + params.category;
     var req = new Request(url);
@@ -58,27 +53,6 @@ function TopPost() {
               );
             }
           })}
-
-          {/* {indexs.map((article,index)=>{
-        
-        if (index < count) {
-          return (
-            <div className="article" key={article}>
-              <img className="thumbnail" src={article.urlToImage} alt="Image Loading..." />
-
-              <div className="text-content">
-                <Link to={`/NewPage/${article.title}`} state={{ article }}>
-                  <p>{article.title}</p>
-                  <p className="title">{article.title}</p>
-                </Link>
-                <p className="content">{article.content}</p>
-                <p className="published">{article.publishedAt}</p>
-              </div>
-            </div>
-          );
-        }
-      }
-        )}; */}
         </div>
         <div className="AD">Advertisement</div>
 
@@ -90,3 +64,4 @@ function TopPost() {
   }
 }
 export default TopPost;
+

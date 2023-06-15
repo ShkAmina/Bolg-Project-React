@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 // import { CircularProgress } from '@mui/material';
 import { Link, useParams } from "react-router-dom";
-import TopPost from "./TopPost";
+// import TopPost from "./TopPost";
 import TheLatest from "./TheLatest";
+import TopPostHome from "./TopPostHome";
+
+import LatestArticle from "./LatestArticle";
+import LatestStories from "./LatestStories";
 function Home() {
 
   const params = useParams();
@@ -58,7 +62,7 @@ function Home() {
       });
   }, [params]);
   if (loaded1 && loaded2 &&loaded3) {
-    const newLocal = "RIGHTIMG";
+   
     return (
       <>
         <h1>Home</h1>
@@ -75,7 +79,6 @@ function Home() {
             </div>
 
             <div className="RIGHT">
-
               <div className="TOPRIGHT">
                 <img className="RIGHTIMG" src={data1[1].urlToImage} alt="load" />
                 <Link to={`/NewPage/${data1[1].title}`} state={data1[1]}>
@@ -84,90 +87,41 @@ function Home() {
               </div>
 
               <div className="BOTTOMRIGHT">
-                <img  className="RIGHTIMG" src={data1[2].urlToImage} alt="load" />
-                <Link to={`/NewPage/${data1[2].title}`} state={data1[2]}>
-                <p className="para3">{data1[2].title}</p>
+                <img  className="RIGHTIMG1" src={data1[48].urlToImage} alt="load" />
+                <Link to={`/NewPage/${data1[44].title}`} state={data1[45]}>
+                <p className="para3">{data1[45].title}</p>
                 </Link>
            
 
             </div>
 
-{/* 
-<div className="1" flex>
-  <div className="1.1"></div>
-  <div className="1.2"flexcolum>
-    <div className="2 2"> <img src={data1[2].urlToImage} alt="load" />
-                
-                <Link to={`/NewPage/${data1[2].title}`} state={data1[2]}></Link>
-                <h5>{data1[2].title}</h5>
-                </div>
-    <div className="2 2"></div>
-  </div>
-</div> */}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          {/* </section>
-
-          <section className="LEFT">
-            <div className="TOPLEFT">
-              <img className="LEFTIMG" src={data1[0].urlToImage} alt="load" />
-              <Link to={`/NewPage/${data1[0].title}`} state={data1[0]}>
-                <h3>{data1[0].title}</h3>
-              </Link>
-            </div>
-            <section className="RIGHT">
-              <div className="TOPRIGHT">
-                <img src={data2[0].urlToImage} alt="load" />
-                <Link to={`/NewPage/${data2[0].title}`} state={data2[0]}></Link>
-                <h5>{data2[0].title}</h5>
-              </div>
-              <div className="BOTTOMRIGHT">
-                <img src={data3[0].urlToImage} alt="load" />
-                <Link to={`/NewPage/${data3[0].title}`} state={data3[0]}></Link>
-                <h5>{data3[0].title}</h5>
-              </div>
-            </section>
-          </section>
-
-          <section  className="LEFT">
-            <div className="TOPLEFT">
-              <img className="LEFTIMG" src={data1[0].urlToImage} alt="load" />
-              <Link to={`/NewPage/${data1[0].title}`} state={data1[0]}>
-                <h3>{data1[0].title}</h3>
-              </Link>
-            </div>
-            <section className="RIGHT">
-              <div className="TOPRIGHT">
-                <img src={data1[0].urlToImage} alt="load" />
-                <Link to={`/NewPage/${data1[0].title}`} state={data1[0]}></Link>
-                <h5>{data1[0].title}</h5>
-              </div>
-              <div className="BOTTOMRIGHT">
-                <img src={data1[0].urlToImage} alt="load" />
-                <Link to={`/NewPage/${data1[0].title}`} state={data1[0]}></Link>
-                <h5>{data1[0].title}</h5>
-              </div>
-            </section> */}
           </div>
        
         </div>
-        <h1 style={{paddingLeft:"10px",margin:"0px"}}>The latest</h1>
+        <h1 style={{paddingLeft:"10px",margin:"0px"}}>The Latest</h1>
         <hr className="Shortline"></hr>
        <TheLatest props={{data1,data2,data3}}/>
+      <div className="mini">
+      <h1 style={{marginBottom:"10px"}}> Latest Articles </h1>
+      <hr  className="Shortline" style={{marginLeft:"0px"}}/>
+      </div>
+      <div className="hometop">
+
+<div style={{display:"flex",flexDirection:"column"}}>
+      <LatestArticle props={{data1,data2,data3}}/>
+<img className="thumbnail1 single" src={data3[12].urlToImage} alt="load" />
+<img className="thumbnail1 single" src={data3[15].urlToImage} alt="load" />
+</div>
+      <div > 
+        <TopPostHome props={{data1,data2,data3}}/>
+        </div>
+      </div>
+      <h1 style={{paddingLeft:"10px",margin:"0px"}}>Latest Stories</h1>
+        <hr className="Shortline"></hr>
+        <LatestStories props={{data1,data2,data3}}/>
+     
       </>
     );
   }
