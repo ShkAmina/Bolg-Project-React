@@ -1,8 +1,8 @@
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
-import { CircularProgress } from '@mui/material';
-import { Link, useParams } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 
 function TopPostHome(props) {
 
@@ -35,10 +35,10 @@ const { data1, data2, data3 } = props.props;
 
                   <div className="text-content">
                     <Link to={`/NewPage/${data3[4].title}`} state={ data1[4] }>
-                      {/* <p>{article.title}</p>/ */}
+                      
                       <p className="title">{data3[4].title}</p>
                     </Link>
-                    <p className="content">{data1[4].content}</p>
+                    <p className="content">{data2[4].content}</p>
                     <p className="published">{data1[4].publishedAt}</p>
                   </div>
                 </div>
@@ -46,12 +46,12 @@ const { data1, data2, data3 } = props.props;
                   <img className="thumbnail" src={data1[8].urlToImage} alt="Image Loading..." />
 
                   <div className="text-content">
-                    <Link to={`/NewPage/${data1[8].title}`} state={ data1[8] }>
+                    <Link to={`/NewPage/${data2[8].title}`} state={ data2[8] }>
                       {/* <p>{article.title}</p>/ */}
-                      <p className="title">{data1[8].title}</p>
+                      <p className="title">{data2[8].title}</p>
                     </Link>
-                    <p className="content">{data1[8].content}</p>
-                    <p className="published">{data1[8].publishedAt}</p>
+                    <p className="content">{data2[8].content}</p>
+                    <p className="published">{data2[8].publishedAt}</p>
                   </div>
                 </div>
          
