@@ -34,11 +34,11 @@ function TopPost() {
         <div className="ArticalTop">
           <h1 style={{ textTransform: "capitalize" }}>Top Post</h1>
           <hr className="Shortline"/>
-          {data.map((article, index) => {
+          {data.map((article, index)=>{
 
             if (index < count) {
               return (
-                <div className="article" key={article}>
+                <div className="article" key={index}>
                   <img className="thumbnail" src={article.urlToImage} alt="Image Loading..." />
 
                   <div className="text-content">

@@ -18,18 +18,18 @@ function TheLatest(props) {
             </div>
             <div className="THEh3">
               
-                <img className="thumbnail" src={data1[10].urlToImage} alt="Image Loading..." />
-                <Link to={`/NewPage/${data1[10].title}`} state={data1[10]}>
-                    <h3 className="title">{data1[10].title}</h3>
+                <img className="thumbnail" src={data2[10].urlToImage} alt="Image Loading..." />
+                <Link to={`/NewPage/${data2[10].title}`} state={data2[10]}>
+                    <h3 className="title">{data2[10].title}</h3>
                 </Link>
                 <p>{data1[10].content}</p>
                 <p >{data1[10].publishedAt}</p>
             </div>
             <div className="THEh3">
           
-                <img className="thumbnail" src={data1[61].urlToImage} alt="Image Loading..." />
-                <Link to={`/NewPage/${data1[61].title}`} state={data1[61]}>
-                    <h3 className="title">{data1[61].title}</h3>
+                <img className="thumbnail" src={data3[61].urlToImage} alt="Image Loading..." />
+                <Link to={`/NewPage/${data3[61].title}`} state={data3[61]}>
+                    <h3 className="title">{data3[61].title}</h3>
                 </Link>
                 <p>{data1[61].content}</p>
                 <p >{data1[61].publishedAt}</p>

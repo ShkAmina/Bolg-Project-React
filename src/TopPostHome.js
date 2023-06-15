@@ -1,13 +1,7 @@
-
 import React from "react";
 import "./App.css";
-
 import { Link } from "react-router-dom";
-
-function TopPostHome(props) {
-
-
-  
+function TopPostHome(props) {  
 console.log("Props", props.props)
 const { data1, data2, data3 } = props.props;
   
