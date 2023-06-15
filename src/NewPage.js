@@ -7,7 +7,7 @@ function NewPage() {
   return (
 
     <div className='Link'>
-      <img style={{width:"500px",height:"300px"}}src={Loc.urlToImage}></img>
+      <img style={{ width: "500px", height: "300px" }} src={Loc.urlToImage}></img>
       <h1 className='newsheading'>
         {Loc.title}
       </h1>

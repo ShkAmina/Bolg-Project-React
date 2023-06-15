@@ -5,11 +5,29 @@
 
 .ArticalTop {
   width: 500px;
+  padding: 10px;
+}
+
+.Toppostheading {
+  text-transform: capitalize;
+  width: 370px;
 }
 
 .article {
   width: 70%;
-  height: 50%;
+  height: 10%;
+  margin: 10px;
+  margin-bottom: 30px;
+  padding: 5px;
+  padding-bottom: 30px;
+  gap: 10px;
+  display: flex;
+  border-bottom: solid 2px rgb(214, 204, 204);
+}
+
+.article1 {
+  width: 100%;
+  height: 15%;
   margin: 10px;
   margin-bottom: 30px;
   padding: 5px;
@@ -23,7 +41,8 @@
   width: 200px;
   height: 200px;
 }
-.thumbnail1{
+
+.thumbnail1 {
   width: 500px;
   height: 330px;
   margin-top: 50px;
@@ -36,7 +55,6 @@
 .text-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .content {
@@ -54,13 +72,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.navBar {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 10px;
-}
-
 .line {
   text-decoration: none;
   color: black;
@@ -79,16 +90,11 @@ span {
   font-weight: 400;
   transform: translateX(20%) translateY(5%) rotate(-90deg);
 }
-
-.section {
-  display: flex;
-}
-
 .sectionTop {
   display: flex;
   flex-direction: column;
 }
-.sectionTop1{
+.sectionTop1 {
   display: flex;
   flex-direction: column;
 }
@@ -101,7 +107,6 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 20px; */
 }
 
 .Shortline {
@@ -110,7 +115,8 @@ span {
   margin-left: 10px;
   background-color: orangered;
 }
-.mini{
+
+.mini {
   margin-left: 10px;
 }
 
@@ -123,7 +129,6 @@ button {
   font-size: 18px;
   color: orangered;
 }
-
 button {
   font-size: 15px;
 }
@@ -162,25 +167,23 @@ button {
   flex-direction: column;
   margin: 0;
 }
-.LEFTIMG{
-  border-radius: 20px;
-}
 
 .RIGHTIMG {
   border-radius: 20px;
   position: absolute;
-  top: 349px;
-  width: 600px;
+  top: 387px;
+  width: 500px;
   height: 217px;
   margin: 0;
   padding: 0;
 }
+
 .RIGHTIMG1 {
   border-radius: 20px;
   position: absolute;
-top: 600px;
-left: 650px;
-  width: 600px;
+  top: 639px;
+  left: 650px;
+  width: 500px;
   height: 220px;
   margin: 0;
   padding: 0;
@@ -238,8 +241,8 @@ a {
   width: 100vw;
   padding: 10px;
 }
+
 .THEh4 {
-  /* width: 100vw; */
   padding: 10px;
 }
 
@@ -248,10 +251,27 @@ a {
   justify-content: space-around;
 }
 
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 0;
+}
+
+.LEFTIMG {
+  border-radius: 20px;
+}
+
 @media screen and (max-width:760px) {
   .RIGHT {
     display: none;
   }
+
+  .navBar {
+    width: 10px;
+    padding: 10px;
+  }
+
 
   .thelatest {
     display: flex;
@@ -260,19 +280,16 @@ a {
 
   .AD {
     display: none;
-    
-     margin-top: 20px;
+    margin-top: 20px;
   }
 
   .ArticalTop {
     display: flex;
     flex-direction: column;
+    width: 200px;
   }
 
   .topHome {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     text-align: center;
   }
 
@@ -280,6 +297,7 @@ a {
     margin-left: 100px;
     width: 400px;
     height: 300px;
+    border-radius: 20%;
   }
 
   .para1 {
@@ -295,7 +313,7 @@ a {
     width: 40vw;
     padding: 10px;
   }
-  
+
   .THEh4 {
     width: 40vw;
     padding: 10px;
@@ -305,25 +323,115 @@ a {
     width: 50px;
   }
 
-  .ArticalTop {
-    width: 200px;
-  }
-
-  /* .ArticalTop {
-    width: 500px;
-    display: none;
-  } */
   .sectionTop {
     display: flex;
     flex-direction: column;
   }
+
   .hometop {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .single{
+
+  .single {
     display: none;
   }
-  
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    width: 20vh;
+    margin-right: 0;
+  }
+
+  .ArticalBox {
+    width: 200px;
+  }
+
+  .LEFTIMG {
+    margin-left: 80px;
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+  }
+
+}
+
+@media screen and (min-width:760px) and (max-width:800px) {
+  .Toppostheading {
+    text-transform: capitalize;
+    width: 30px;
+  }
+
+  .ArticalTop {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+
+  }
+
+  .ArticalBox {
+    width: 500px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    margin-right: 0;
+  }
+
+  .RIGHT {
+    display: none;
+  }
+
+  .article {
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .THEh4 {
+    width: 30vw;
+    padding: 10px;
+  }
+
+  .LArticale {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .thumbnail1 {
+    width: 45vw;
+    height: 330px;
+    margin-top: 50px;
+  }
+
+  .THEh3 {
+    width: 25vw;
+    padding: 10px;
+  }
+
+  .AD {
+    border-style: solid;
+    border-color: black;
+    width: 200px;
+    height: 400px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hometop {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  ul {
+    padding: 0;
+  }
 }

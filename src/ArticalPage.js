@@ -10,15 +10,12 @@ function ArticalPage() {
   const params = useParams();
   const [count, setCount] = useState(7);
   console.log("UseParams returned : ", params);
-  const date = new Date();
-  const dateString = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
-  console.log(dateString);
+
   useEffect(() => {
 
-    // var url = "https://newsapi.org/v2/everything?q=" + params.category + "&from=" + dateString + "&sortBy=publishedAt&apiKey=6b7565cd97ef4ee8b3e5750e6ac65071";
 
 
-    var url = "https://blog-project-by-amina.onrender.com/"+params.category;
+    var url = "https://blog-project-by-amina.onrender.com/" + params.category;
     var req = new Request(url);
 
     fetch(req)
@@ -40,12 +37,12 @@ function ArticalPage() {
 
             if (index < count) {
               return (
-                <div className="article" key={article}>
+                <div className="article1" key={article}>
                   <img className="thumbnail" src={article.urlToImage} alt="Image Loading..." />
 
                   <div className="text-content">
-                    <Link to={`/NewPage/${article.title}`} state={ article }>
-                      {/* <p>{article.title}</p> */}
+                    <Link to={`/NewPage/${article.title}`} state={article}>
+
                       <p className="title">{article.title}</p>
                     </Link>
                     <p className="content">{article.content}</p>
@@ -62,7 +59,7 @@ function ArticalPage() {
           </button>
         </div>
         <div>
-        <TopPost/>
+          <TopPost />
         </div>
       </div>
     );

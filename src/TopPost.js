@@ -32,9 +32,9 @@ function TopPost() {
     return (
       <div className="sectionTop" >
         <div className="ArticalTop">
-          <h1 style={{ textTransform: "capitalize" }}>Top Post</h1>
-          <hr className="Shortline"/>
-          {data.map((article, index)=>{
+          <h1 className="Toppostheading" >Top Post</h1>
+          <hr className="Shortline" />
+          {data.map((article, index) => {
 
             if (index < count) {
               return (
@@ -43,7 +43,6 @@ function TopPost() {
 
                   <div className="text-content">
                     <Link to={`/NewPage/${article.title}`} state={{ article }}>
-                      {/* <p>{article.title}</p>/ */}
                       <p className="title">{article.title}</p>
                     </Link>
                     <p className="content">{article.content}</p>

@@ -14,7 +14,8 @@ function LatestArticle(props) {
     <div >
       <div >
 
-        <div >
+        <div  className="LArticale">
+       
           <div className="THEh4">
             <img className="thumbnail" src={data1[28].urlToImage} alt="load" />
             <Link to={`/NewPage/${data1[28].title}`} state={data1[28]}>
@@ -50,13 +51,13 @@ function LatestArticle(props) {
               <p className="title">{data3[18].title}</p>
             </Link>
           </div>
-
-        </div>
-        <button onClick={() => {
+          <button onClick={() => {
         setCount(count + 7);
       }}>
         <span className="arrow">⬇</span> Load More
       </button>
+        </div>
+        
       </div>
       
 
