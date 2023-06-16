@@ -301,7 +301,13 @@ a {
   }
 
   .para1 {
-    display: none;
+    
+    position: absolute;
+    right:  150px;
+    top: 320px;
+    left: 10px;
+    
+
   }
 
   .TOPLEFT {
