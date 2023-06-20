@@ -21,9 +21,6 @@ function Home() {
   console.log("UseParams returned : ", params);
 
   useEffect(() => {
-
-
-
     var url1 = "https://blog-project-by-amina.onrender.com/fitness";
     var url2 = "https://blog-project-by-amina.onrender.com/food";
     var url3 = "https://blog-project-by-amina.onrender.com/technology";
@@ -106,7 +103,7 @@ function Home() {
             <div style={{ display: "flex", flexDirection: "column" }}>
               <LatestArticle props={{ data1, data2, data3 }} />
               <img className="thumbnail1 single" src={data3[12].urlToImage} alt="load" />
-              <img className="thumbnail1 single" src={data3[15].urlToImage} alt="load" />
+              <img className="thumbnail1 single hide" src={data3[15].urlToImage} alt="load" />
             </div>
             <div >
               <TopPostHome props={{ data1, data2, data3 }} />

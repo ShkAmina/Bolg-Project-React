@@ -31,8 +31,10 @@ function ArticalPage() {
     return (
       <div className="section" >
         <div className="ArticalBox">
-          <h1 style={{ textTransform: "capitalize" }}>{params.category}</h1>
+          <h1 style={{ textTransform: "capitalize" }}>{params.category}
+          
           <hr className="Shortline"></hr>
+          </h1>
           {data.map((article, index) => {
 
             if (index < count) {
@@ -43,10 +45,10 @@ function ArticalPage() {
                   <div className="text-content">
                     <Link to={`/NewPage/${article.title}`} state={article}>
 
-                      <p className="title">{article.title}</p>
+                      <p className="title thumbnailHEAding">{article.title}</p>
                     </Link>
-                    <p className="content">{article.content}</p>
-                    <p className="published">{article.publishedAt}</p>
+                    <p className="content thumbnailHEAding">{article.content}</p>
+                    <p className="published thumbnailHEAding">{article.publishedAt}</p>
                   </div>
                 </div>
               );

@@ -27,14 +27,15 @@
 
 .article1 {
   width: 100%;
-  height: 15%;
+  /* height: 10px; */
   margin: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding: 5px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   gap: 10px;
   display: flex;
   border-bottom: solid 2px rgb(214, 204, 204);
+  flex-direction: column;
 }
 
 .thumbnail {
@@ -55,6 +56,7 @@
 .text-content {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 .content {
@@ -72,6 +74,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .line {
   text-decoration: none;
   color: black;
@@ -90,14 +93,17 @@ span {
   font-weight: 400;
   transform: translateX(20%) translateY(5%) rotate(-90deg);
 }
+
 .sectionTop {
   display: flex;
   flex-direction: column;
 }
+
 .sectionTop1 {
   display: flex;
   flex-direction: column;
 }
+
 .AD {
   border-style: solid;
   border-color: black;
@@ -129,6 +135,7 @@ button {
   font-size: 18px;
   color: orangered;
 }
+
 button {
   font-size: 15px;
 }
@@ -204,6 +211,7 @@ button {
   position: relative;
   bottom: 70px;
   padding: 10px;
+  right: 70px;
   margin: 0;
   color: white;
   font-size: large;
@@ -235,6 +243,7 @@ a {
 /* .............................TheLatest.................................. */
 .thelatest {
   display: flex;
+
 }
 
 .THEh3 {
@@ -267,15 +276,30 @@ a {
     display: none;
   }
 
+  .article1 {
+    margin: 0;
+    padding: 0;
+  }
+
   .navBar {
     width: 10px;
     padding: 10px;
   }
 
+  .thumbnail {
+    width: 350px;
+    height: 200px;
+  }
+
+  .thumbnailHEAding {
+    width: 350px;
+  }
 
   .thelatest {
     display: flex;
     flex-direction: column;
+    /* justify-content: space-evenly; */
+    /* align-items: center ; */
   }
 
   .AD {
@@ -287,6 +311,7 @@ a {
     display: flex;
     flex-direction: column;
     width: 200px;
+    padding: 5px;
   }
 
   .topHome {
@@ -301,12 +326,12 @@ a {
   }
 
   .para1 {
-    
+
     position: absolute;
-    right:  150px;
+    right: 150px;
     top: 320px;
     left: 10px;
-    
+
 
   }
 
@@ -352,7 +377,7 @@ a {
   }
 
   .ArticalBox {
-    width: 200px;
+    width: 100vw;
   }
 
   .LEFTIMG {
@@ -362,29 +387,48 @@ a {
     border-radius: 20px;
   }
 
+  .article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+  }
+  .thumbnailHEADING {
+    width: 300px;
+  }
+
 }
 
 @media screen and (min-width:760px) and (max-width:800px) {
   .Toppostheading {
     text-transform: capitalize;
-    width: 30px;
+    /* width: 50px; */
   }
 
   .ArticalTop {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    /* justify-content: center;
+    align-items: center; */
+    width: 50vw;
 
   }
 
   .ArticalBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 500px;
+
   }
 
   .section {
     display: flex;
     flex-direction: column;
-    width: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
     margin-right: 0;
   }
 
@@ -396,6 +440,7 @@ a {
 
     display: flex;
     flex-direction: column;
+    width: 30%;
   }
 
   .THEh4 {
@@ -417,7 +462,7 @@ a {
   }
 
   .THEh3 {
-    width: 25vw;
+    width: 35vw;
     padding: 10px;
   }
 
@@ -426,7 +471,7 @@ a {
     border-color: black;
     width: 200px;
     height: 400px;
-    margin-bottom: 10px;
+    margin: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -434,10 +479,17 @@ a {
 
   .hometop {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   ul {
     padding: 0;
+  }
+  .hide{
+    display: none;
+  }
+  .thumbnailHEADING {
+    width: 300px;
   }
 }
