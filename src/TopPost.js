@@ -31,11 +31,12 @@ function TopPost() {
   if (loaded) {
     return (
       <div className="sectionTop" >
-        <div className="ArticalTop">
-          <h1 className="Toppostheading" >Top Post
+           <h1 className="Toppostheading" >Top Post
           
           <hr className="Shortline" />
           </h1>
+        <div className="ArticalTop">
+       
           {data.map((article, index) => {
 
             if (index < count) {

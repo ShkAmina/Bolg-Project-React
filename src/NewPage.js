@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-
+import "./App.css"
 function NewPage() {
   const Nav = useNavigate();
   const Loc = useLocation().state
@@ -21,7 +21,10 @@ function NewPage() {
         }}
         className="BacktoHome"
       >
-        ⬅️Come to Home
+        <div className='bAckBTN'>
+        <i class="fa-solid fa-arrow-left-long"></i>
+        Back
+        </div>
       </button>
 
 
