@@ -94,18 +94,26 @@ function Home() {
         <hr className="Shortline"></hr>
         <TheLatest props={{ data1, data2, data3 }} />
         <div className="sk">
-          <div className="mini">
-            <h1 style={{ marginBottom: "10px" }}> Latest Articles </h1>
-            <hr className="Shortline" style={{ marginLeft: "0px" }} />
-          </div>
+        
           <div className="hometop">
 
             <div style={{ display: "flex", flexDirection: "column" }}>
+            <div className="mini">
+            <h1 style={{ marginBottom: "10px" ,width:"400px"}}> Latest Articles </h1>
+            <hr className="Shortline" style={{ marginLeft: "0px" }} />
+          </div>
               <LatestArticle props={{ data1, data2, data3 }} />
               <img className="thumbnail1 single" src={data3[12].urlToImage} alt="load" />
               <img className="thumbnail1 single hide" src={data3[15].urlToImage} alt="load" />
             </div>
+       
             <div >
+            <div>
+            <h1 className="topHome" style={{ textTransform: "capitalize" }}>Top Post
+        
+        <hr className="Shortline" />
+        </h1>
+            </div>
               <TopPostHome props={{ data1, data2, data3 }} />
             </div>
           </div>

@@ -31,22 +31,19 @@ function TopPost() {
   if (loaded) {
     return (
       <div className="sectionTop" >
-           <h1 className="Toppostheading" >Top Post
-          
-          <hr className="Shortline" />
-          </h1>
+
         <div className="ArticalTop">
-       
+
           {data.map((article, index) => {
 
             if (index < count) {
               return (
                 <div className="article" key={index}>
-                  
+
                   <div><img className="thumbnail" src={article.urlToImage} alt="Image Loading..." /></div>
 
                   <div className="text-content">
-                    <Link to={`/NewPage/${article.title}`} state={{ article }}>
+                    <Link to={`/NewPage/${article.title}`} state={article}>
                       <p className=" title thumbnailHEADING">{article.title}</p>
                     </Link>
                     <p className="content thumbnailHEADING">{article.content}</p>

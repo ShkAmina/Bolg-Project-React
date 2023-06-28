@@ -32,8 +32,8 @@ function ArticalPage() {
       <div className="section" >
         <div className="ArticalBox">
           <h1 style={{ textTransform: "capitalize" }}>{params.category}
-          
-          <hr className="Shortline"></hr>
+
+            <hr className="Shortline"></hr>
           </h1>
           {data.map((article, index) => {
 
@@ -61,6 +61,10 @@ function ArticalPage() {
           </button>
         </div>
         <div>
+          <h1 className="Toppostheading" >Top Post
+
+            <hr className="Shortline" />
+          </h1>
           <TopPost />
         </div>
       </div>

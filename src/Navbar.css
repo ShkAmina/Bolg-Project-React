@@ -50,18 +50,19 @@ header li a:hover {
 
 .HEADING {
     text-align: center;
-    width: 50vw;
+    width: 90vw;
     margin-right: 0px;
 }
 
 @media screen and (max-width:760px) {
     .navBar {
-        width: 90vw;
+        width: 100vw;
         padding: 0;
+        margin: 0;
     }
 
     header {
-        width: 100vw;
+        width: 99vw;
     }
 
     .head .heading {
@@ -85,7 +86,7 @@ header li a:hover {
         background-color: #fb4c35;
         left: 0;
         top: 180px !important;
-        width: 100vw;
+        width: 96.5vw;
         height: 45vh;
         z-index: 5;
         padding: 5px;
@@ -111,6 +112,9 @@ header li a:hover {
 
     h1 {
         margin-right: 0px;
+    }
+    .navBar{
+        margin-right: 0;
     }
 }
 
